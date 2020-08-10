@@ -4,7 +4,6 @@ import model.UserModel;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class TestApi {
     String BASE_URI = "https://reqres.in";
     String USER_URI = "/api/users";
@@ -28,7 +27,6 @@ public class TestApi {
                 .extract()
         //проверяем что созданный объект соответствует классу
                 .body().as(UserModel.class);
-
         //проверяем что отправленый объект соответсвтует созданному
         assertEquals(cr.getName(), ur.getName());
         assertEquals(cr.getJob(), ur.getJob());
