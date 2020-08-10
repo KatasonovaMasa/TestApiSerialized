@@ -4,6 +4,7 @@ import model.UserModel;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class TestApi {
     String BASE_URI = "https://reqres.in";
     String USER_URI = "/api/users";
